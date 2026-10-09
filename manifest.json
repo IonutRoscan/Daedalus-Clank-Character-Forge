@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Daedalus: Clank Character Forge",
+  "version": "1.3.0",
+  "description": "A local character-creation IDE with Storycraft Planning, RP Systems, guided creation, prompt builders, and creator tools for ClankWorld.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.clank.world/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.clank.world/create*"
+      ],
+      "js": [
+        "src/core/systems.js",
+        "src/core/project-store.js",
+        "src/core/planning.js",
+        "src/core/storycraft.js",
+        "src/core/compilers.js",
+        "src/core/rules-library.js",
+        "src/core/templates.js",
+        "src/core/inspector.js",
+        "src/core/field-detector.js",
+        "src/ui/storycraft-studio.js",
+        "src/ui/planning-station.js",
+        "src/ui/guidance.js",
+        "src/ui/systems-studio.js",
+        "src/ui/forge-panel.js",
+        "src/content.js"
+      ],
+      "css": [
+        "src/styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Daedalus: Clank Character Forge",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}
